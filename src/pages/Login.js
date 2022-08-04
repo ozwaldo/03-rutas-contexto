@@ -1,7 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { UsuarioContext } from '../context/UsuarioContext';
 
 export const Login = () => {
-  return (
-    <div>Login</div>
-  )
+
+    const {usuarioState} = useContext(UsuarioContext);
+
+    return (
+        <div>
+            <p>Usuario: <strong>{usuarioState.sobrenombre}</strong></p>
+        </div>
+    )
 }

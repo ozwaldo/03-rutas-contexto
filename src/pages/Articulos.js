@@ -1,7 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { NumeroContext } from '../context/NumeroContext'
 
 export const Articulos = () => {
+  
+  const numeroContext = useContext(NumeroContext);
+
   return (
-    <div>Articulos</div>
+    <div>Articulos: <strong>{numeroContext}</strong></div>
   )
 }
